@@ -20,6 +20,7 @@ class PlainTemporalModel(nn.Module):
     def _temporal_logprob(self, event_times, spatial_locations, input_masks, t0, t1):
         return self.temporal_model.logprob(event_times, spatial_locations, input_masks, t0, t1)
 
+
 class SpatiotemporalModel(nn.Module, metaclass=ABCMeta):
 
     @abstractmethod
