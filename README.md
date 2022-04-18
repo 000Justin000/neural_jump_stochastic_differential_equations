@@ -53,7 +53,7 @@ See additional arguments using `python train_stpp.py --help`.
 
 # Citations
 If you find this repository helpful in your publications,
-please consider citing our paper.
+please consider citing the following papers.
 
 ```
 @incollection{NIPS2019_9177,
