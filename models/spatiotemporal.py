@@ -11,6 +11,7 @@ class PlainTemporalModel(nn.Module):
 
     def __init__(self, temporal_model):
         super().__init__()
+        self.temporal_model = temporal_model
 
 
 class SpatiotemporalModel(nn.Module, metaclass=ABCMeta):
