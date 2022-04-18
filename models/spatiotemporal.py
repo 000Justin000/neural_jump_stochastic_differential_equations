@@ -13,6 +13,12 @@ class PlainTemporalModel(nn.Module):
         super().__init__()
         self.temporal_model = temporal_model
 
+    def forward(self, event_times, spatial_locations, input_mask, t0, t1):
+        time_loglik = self._temporal_logprob(event_times, spatial_locations, input_mask, t0, t1)
+        return 0, time_loglik
+
+    def _temporal_logprob(self, event_times, spatial_locations, input_masks, t0, t1):
+        return self.temporal_model.logprob(event_times, spatial_locations, input_masks, t0, t1)
 
 class SpatiotemporalModel(nn.Module, metaclass=ABCMeta):
 
