@@ -1,6 +1,6 @@
 # Neural Jump Stochastic Differential Equations
 
-This repository reproduces the experiments in [this](https://arxiv.org/abs/1905.10403) paper.
+This repository reproduces the experiments in the original [paper](https://arxiv.org/abs/1905.10403).
 This is a reimplementation of the original [code](https://github.com/000Justin000/torchdiffeq/tree/jj585) and is more efficient and supports gpu.
 This implementation is based on the [code](https://github.com/facebookresearch/neural_stpp) released with the recent paper 'Neural Spatio-Temporal Point Processes'.
 
