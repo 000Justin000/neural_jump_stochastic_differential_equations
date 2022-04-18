@@ -286,8 +286,6 @@ def _main(rank, world_size, args, savepath, logger):
                 SelfAttentiveCNF(dim=x_dim, hidden_dims=list(map(int, args.hdims.split("-"))),
                                  layer_type=args.layer_type, actfn=args.actfn, l2_attn=args.l2_attn, tol=args.tol, otreg_strength=args.otreg_strength),
                 tpp_model).to(device)
-        elif args.model == "none":
-            model = PlainTemporalModel(tpp_model).to(device)
         else:
             raise ValueError(f"Invalid model {args.model}")
 
