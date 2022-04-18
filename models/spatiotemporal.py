@@ -15,7 +15,7 @@ class PlainTemporalModel(nn.Module):
 
     def forward(self, event_times, spatial_locations, input_mask, t0, t1):
         time_loglik = self._temporal_logprob(event_times, spatial_locations, input_mask, t0, t1)
-        return 0, time_loglik
+        return torch.zeros_like(time_loglik), time_loglik
 
     def _temporal_logprob(self, event_times, spatial_locations, input_masks, t0, t1):
         return self.temporal_model.logprob(event_times, spatial_locations, input_masks, t0, t1)
