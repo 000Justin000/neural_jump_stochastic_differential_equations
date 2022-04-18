@@ -1,13 +1,10 @@
-# Neural Spatio-Temporal Point Processes [[arxiv](https://arxiv.org/abs/2011.04583)]
+# Neural Jump Stochastic Differential Equations
 
-**Ricky T. Q. Chen, Brandon Amos, Maximilian Nickel**
-
-*Abstract.* We propose a new class of parameterizations for spatio-temporal point processes which leverage Neural ODEs as a computational method and enable flexible, high-fidelity models of discrete events that are localized in continuous time and space. Central to our approach is a combination of recurrent continuous-time neural networks with two novel neural architectures, i.e., Jump and Attentive Continuous-time Normalizing Flows. This approach allows us to learn complex distributions for both the spatial and temporal domain and to condition non-trivially on the observed event history. We validate our models on data sets from a wide variety of contexts such as seismology, epidemiology, urban mobility, and neuroscience.
-
-*TL;DR.* We explore a natural extension of deep generative modeling to time-stamped heterogeneous data sets, enabling high-fidelity models for a large variety of spatio-temporal domains.
+This repository aims to reproduce the original [implementation](https://github.com/000Justin000/torchdiffeq/tree/jj585) in a more structured efficient and gpu supported code base.
+This implementation is based on the [code](https://github.com/facebookresearch/neural_stpp) released with the paper 'Neural Spatio-Temporal Point Processes'.
 
 <p align="center">
-<img align="middle" src="./assets/stpp_pinwheel.gif" width="300" />
+<img align="middle" src="./assets/njsde.png" width="300" />
 </p>
 
 *Caption.* A Neural STPP modeling a process where each observation increases the probability of observing from the _next_ cluster in a clock-wise order. Slowly reverts back to the marginal distribution after a period of no new observations.
@@ -59,6 +56,17 @@ If you find this repository helpful in your publications,
 please consider citing our paper.
 
 ```
+@incollection{NIPS2019_9177,
+title = {Neural Jump Stochastic Differential Equations},
+author = {Jia, Junteng and Benson, Austin R},
+booktitle = {Advances in Neural Information Processing Systems 32},
+editor = {H. Wallach and H. Larochelle and A. Beygelzimer and F. d\textquotesingle Alch\'{e}-Buc and E. Fox and R. Garnett},
+pages = {9847--9858},
+year = {2019},
+publisher = {Curran Associates, Inc.},
+url = {http://papers.nips.cc/paper/9177-neural-jump-stochastic-differential-equations.pdf}
+}
+
 @inproceedings{chen2021neuralstpp,
 title={Neural Spatio-Temporal Point Processes},
 author={Ricky T. Q. Chen and Brandon Amos and Maximilian Nickel},
