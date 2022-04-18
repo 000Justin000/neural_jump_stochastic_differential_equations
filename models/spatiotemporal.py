@@ -7,6 +7,12 @@ from models.spatial import JumpCNF, SelfAttentiveCNF, ConditionalGMM
 from models.temporal import NeuralPointProcess
 
 
+class PlainTemporalModel(nn.Module):
+
+    def __init__(self, temporal_model):
+        super().__init__()
+
+
 class SpatiotemporalModel(nn.Module, metaclass=ABCMeta):
 
     @abstractmethod
