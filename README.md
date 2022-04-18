@@ -4,7 +4,7 @@ This repository aims to reproduce the original [implementation](https://github.c
 This implementation is based on the [code](https://github.com/facebookresearch/neural_stpp) released with the paper 'Neural Spatio-Temporal Point Processes'.
 
 <p align="center">
-<img align="middle" src="./assets/njsde.png" width="300" />
+  <img align="middle" src="./assets/njsde.png" width="300"/>
 </p>
 
 *Caption.* A Neural STPP modeling a process where each observation increases the probability of observing from the _next_ cluster in a clock-wise order. Slowly reverts back to the marginal distribution after a period of no new observations.
