@@ -24,6 +24,7 @@ def preprocess():
     df = pd.read_csv("earthquakes/1990_2019.csv")
 
     # filter earthquakes in Japan
+    df = df[df["place"].notna()]
     df = df[df["place"].str.contains("Japan")]
     df = df[["time", "longitude", "latitude"]]
 
