@@ -451,7 +451,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", type=str, choices=MAPS.keys(), default="earthquakes_jp")
 
-    parser.add_argument("--model", type=str, choices=["cond_gmm", "gmm", "cnf", "tvcnf", "jumpcnf", "attncnf"], default="gmm")
+    parser.add_argument("--model", type=str, choices=["cond_gmm", "gmm", "cnf", "tvcnf", "jumpcnf", "attncnf", "none"], default="gmm")
     parser.add_argument("--tpp", type=str, choices=["poisson", "hawkes", "correcting", "neural"], default="poisson")
     parser.add_argument("--actfn", type=str, default="swish")
     parser.add_argument("--tpp_actfn", type=str, choices=TPP_ACTFNS.keys(), default="softplus")
